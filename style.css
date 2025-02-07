@@ -1,0 +1,275 @@
+/* General Styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+    scroll-behavior: smooth;
+}
+
+body {
+    background: #121212;
+    color: #ffffff;
+}
+
+.container {
+    width: 80%;
+    margin: auto;
+}
+
+/* Header */
+header {
+    background: rgba(20, 20, 20, 0.9);
+    padding: 20px 0;
+    position: fixed;
+    width: 100%;
+    top: 0;
+    left: 0;
+    z-index: 1000;
+    transition: background 0.3s ease-in-out;
+}
+
+header .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo {
+    font-size: 1.8rem;
+    font-weight: bold;
+    color: #ff6b6b;
+    transition: transform 0.3s;
+}
+
+.logo:hover {
+    transform: scale(1.1);
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+}
+
+nav ul li {
+    margin: 0 15px;
+}
+
+nav ul li a {
+    text-decoration: none;
+    padding-top: 50%;
+    color: #ffffff;
+    font-size: 1.2rem;
+    transition: color 0.3s;
+}
+
+nav ul li a:hover {
+    color: #ff6b6b;
+}
+
+/* Navigation Buttons - Moved to Top */
+.nav-buttons {
+    text-align: center;
+    padding: 40px 0;
+    background: #181818;
+    position: fixed;
+    top: 80px; /* Adjust this to create space under the header */
+    width: 100%;
+    z-index: 999;
+}
+
+.nav-buttons .btn {
+    display: inline-block;
+    margin: 10px;
+    padding: 15px 30px;
+    font-size: 1.2rem;
+    background: #ff6b6b;
+    color: #ffffff;
+    text-decoration: none;
+    border-radius: 5px;
+    transition: background 0.3s ease-in-out;
+}
+
+.nav-buttons .btn:hover {
+    background: #e74c3c;
+}
+
+/* Intro Section */
+.intro {
+    height: 80vh;
+    padding-top: -20%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: start;
+    background: linear-gradient(135deg, #413c3c, #556270);
+    animation: fadeIn 1.5s ease-in-out;
+    margin-top: 100px; /* Add space for the fixed navbar */
+}
+
+.intro h2 {
+    font-size: 3rem;
+    animation: slideUp 1s ease-in-out;
+}
+
+.intro p {
+    font-size: 1.2rem;
+    margin-top: 10px;
+    animation: slideUp 1.5s ease-in-out;
+}
+
+/* About Section */
+.about {
+    padding: 100px 0;
+    text-align: center;
+    background: linear-gradient(135deg, #ff6b6b, #556270);
+    color: #ffffff;
+}
+
+.about h2 {
+    font-size: 2.5rem;
+    margin-bottom: 20px;
+    color: #ff6b6b;
+    animation: slideUp 1s ease-in-out;
+}
+
+.about p {
+    font-size: 1.2rem;
+    color: #cccccc;
+    line-height: 1.6;
+    margin-bottom: 1000px;
+    animation: slideUp 1.5s ease-in-out;
+}
+
+/* Footer */
+footer {
+    background: linear-gradient(135deg, #ff6b6b, #556270);
+    padding: 20px 0;
+    text-align: center;
+    position: relative;
+    bottom: 0;
+    width: 100%;
+}
+
+/* Animations */
+@keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+
+@keyframes slideUp {
+    from { transform: translateY(30px); opacity: 0; }
+    to { transform: translateY(0); opacity: 1; }
+}
+
+/* Projects Section */
+.projects {
+    padding: 100px 0;
+    text-align: center;
+    background: #1e1e1e;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.projects h2 {
+    font-size: 2.5rem;
+    margin-bottom: 20px;
+}
+
+.project-cards {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+}
+
+.card {
+    background: #282828;
+    padding: 20px;
+    border-radius: 10px;
+    transition: transform 0.3s ease-in-out;
+    max-width: 300px;
+    text-align: center;
+}
+
+.card img {
+    width: 100%;
+    border-radius: 10px;
+    margin-bottom: 10px;
+}
+
+.card:hover {
+    transform: translateY(-10px);
+}
+
+.card h3 {
+    color: #ff6b6b;
+    margin-bottom: 10px;
+}
+
+.card p {
+    font-size: 1rem;
+    color: #cccccc;
+}
+
+/* Contact Section */
+.contact {
+    padding: 100px 0;
+    text-align: center;
+    background: #1a1a1a;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.contact h2 {
+    font-size: 2.5rem;
+    margin-bottom: 20px;
+}
+
+.contact p {
+    font-size: 1.2rem;
+    color: #cccccc;
+    margin-bottom: 20px;
+}
+
+.contact form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.contact input, .contact textarea {
+    width: 100%;
+    max-width: 500px;
+    padding: 10px;
+    margin: 10px 0;
+    border: none;
+    border-radius: 5px;
+    background: #282828;
+    color: #ffffff;
+    font-size: 1rem;
+}
+
+.contact textarea {
+    height: 150px;
+    resize: none;
+}
+
+.contact button {
+    padding: 10px 20px;
+    background: #ff6b6b;
+    color: #ffffff;
+    border: none;
+    border-radius: 5px;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: background 0.3s ease-in-out;
+}
+
+.contact button:hover {
+    background: #e74c3c;
+}

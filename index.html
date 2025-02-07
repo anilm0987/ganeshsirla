@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>GANESH SIRLA</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <style>
+        /* General Styles */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Poppins', sans-serif;
+            scroll-behavior: smooth;
+        }
+
+        body {
+            background: #121212;
+            color: #ffffff;
+        }
+
+        .container {
+            width: 80%;
+            margin: auto;
+        }
+
+        /* Header */
+        header {
+            background: rgba(20, 20, 20, 0.9);
+            padding: 20px 0;
+            position: fixed;
+            width: 100%;
+            top: 0;
+            left: 0;
+            z-index: 1000;
+            transition: background 0.3s ease-in-out;
+        }
+
+        header .container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo {
+            font-size: 1.8rem;
+            font-weight: bold;
+            color: #ff6b6b;
+            transition: transform 0.3s;
+        }
+
+        .logo:hover {
+            transform: scale(1.1);
+        }
+
+        nav ul {
+            list-style: none;
+            display: flex;
+        }
+
+        nav ul li {
+            margin: 0 15px;
+        }
+
+        nav ul li a {
+            text-decoration: none;
+            color: #ffffff;
+            font-size: 1.2rem;
+            transition: color 0.3s;
+        }
+
+        nav ul li a:hover {
+            color: #ff6b6b;
+        }
+
+        /* Intro Section */
+        .intro {
+            height: 80vh;
+            display: flex;
+            flex-direction: row; /* Align image and text side by side */
+            align-items: center; /* Vertically center the content */
+            justify-content: space-between; /* Space out image and text */
+            background: linear-gradient(135deg, #3f4950, #dc6666);
+            animation: fadeIn 1.5s ease-in-out;
+            margin-top: 100px; /* Add space for the fixed navbar */
+            padding: 0 50px;
+        }
+
+        .intro h2 {
+            font-size: 3rem;
+            animation: slideUp 1s ease-in-out;
+        }
+
+        .intro p {
+            font-size: 1.2rem;
+            margin-top: 10px;
+            animation: slideUp 1.5s ease-in-out;
+        }
+
+        /* Profile Image */
+        .profile-image {
+            width: 300px;
+            height: 300px;
+            border-radius: 50%; /* Perfect circle */
+            object-fit: cover;
+            border: 5px solid rgb(0, 255, 208);
+            box-shadow: 0 0 15px rgba(0, 255, 221, 0.7);
+        }
+
+        /* Text Styling */
+        .intro .text {
+            max-width: 600px;
+            color: #ffffff;
+            text-align: left; /* Align text to the left */
+            margin-right: 50px;
+        }
+
+        /* Footer */
+        footer {
+            background: #181818;
+            padding: 20px 0;
+            text-align: center;
+            position: relative;
+            bottom: 0;
+            width: 100%;
+        }
+
+        footer .social-icons {
+            margin-top: 10px;
+        }
+
+        footer .social-icons a {
+            color: #ffffff;
+            font-size: 2rem;
+            margin: 0 15px;
+            text-decoration: none;
+            transition: color 0.3s;
+        }
+
+        footer .social-icons a:hover {
+            color: #ff6b6b;
+        }
+
+        /* Animations */
+        @keyframes fadeIn {
+            from { opacity: 0; }
+            to { opacity: 1; }
+        }
+
+        @keyframes slideUp {
+            from { transform: translateY(30px); opacity: 0; }
+            to { transform: translateY(0); opacity: 1; }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Header -->
+    <header>
+        <div class="container">
+            <div class="logo">
+                GANESH SIRLA
+            </div>
+            <nav>
+                <ul>
+                    <li><a href="about.html">About</a></li>
+                    <li><a href="projects.html">Projects</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Intro Section -->
+    <section class="intro">
+        <div class="text">
+            <div class="social-icons">
+                <a href="mailto:your-email@example.com" target="_blank" title="Email"><i class="fa fa-envelope"></i></a>
+                <a href="https://twitter.com/yourusername" target="_blank" title="Twitter"><i class="fa fa-twitter"></i></a>
+                <a href="https://instagram.com/yourusername" target="_blank" title="Instagram"><i class="fa fa-instagram"></i></a>
+            </div>
+            <h2>Welcome to My Website</h2>
+            <p>Explore My projects and get to know us better.</p>
+        </div>
+        <img src="https://res.cloudinary.com/dvjm7wriy/image/upload/v1738846580/devaralogo_olus5y.jpg" alt="Ganesh Sirla" class="profile-image"> <!-- Add your image here -->
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <p>&copy; 2025 My Website. All rights reserved.</p>
+        <div class="social-icons">
+            <a href="mailto:your-email@example.com" target="_blank" title="Email"><i class="fa fa-envelope"></i></a>
+            <a href="https://twitter.com/yourusername" target="_blank" title="Twitter"><i class="fa fa-twitter"></i></a>
+            <a href="https://instagram.com/yourusername" target="_blank" title="Instagram"><i class="fa fa-instagram"></i></a>
+        </div>
+    </footer>
+
+    <!-- Font Awesome (for icons) -->
+    <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
+
+</body>
+</html>
